@@ -5,8 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
+    private int count = 1;
     @GetMapping("/")
     public String hello() {
-        return "Hello world!";
+        return "<h1>Hello world!</h1>Count: " + count++;
     }
 }
