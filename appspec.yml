@@ -2,8 +2,9 @@ version: 0.0
 os: linux
 
 files:
-  - source: /
+  - source: build/libs
     destination: /home/ubuntu/action
+file_exists_behavior: OVERWRITE
 
 permissions:
   - object: /
@@ -12,10 +13,6 @@ permissions:
     group: ubuntu
 
 hooks:
-  BeforeInstall:
-    - location: scripts/clear.sh
-      timeout: 60
-      runas: ubuntu
   ApplicationStart:
     - location: scripts/deploy.sh
       timeout: 60

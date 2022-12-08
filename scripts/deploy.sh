@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-BUILD_JAR=$(ls /home/ubuntu/action/build/libs/*SNAPSHOT.jar)
+BUILD_JAR=$(ls /home/ubuntu/action/*SNAPSHOT.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 
-echo "> 현재 시간: $(date)" > /home/ubuntu/action/deploy.log
+echo "> 현재 시간: $(date)" >> /home/ubuntu/action/deploy.log
 
 echo "> build 파일명: $JAR_NAME" >> /home/ubuntu/action/deploy.log
 
