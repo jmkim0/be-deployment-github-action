@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-BUILD_JAR=$(ls /home/ubuntu/action | grep "SNAPSHOT.jar")
+BUILD_JAR=$(ls /home/ubuntu/action/build/libs | grep "SNAPSHOT.jar")
 JAR_NAME=$(basename $BUILD_JAR)
 
 echo "> 현재 시간: $(date)" > /home/ubuntu/action/deploy.log

@@ -13,10 +13,10 @@ permissions:
 
 hooks:
   BeforeInstall:
-    - location: clear.sh
+    - location: scripts/clear.sh
       timeout: 60
       runas: ubuntu
   ApplicationStart:
-    - location: deploy.sh
+    - location: scripts/deploy.sh
       timeout: 60
       runas: ubuntu
