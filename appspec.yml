@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: build/libs
+  - source: /
     destination: /home/ubuntu/action
 
 permissions:
@@ -13,10 +13,10 @@ permissions:
 
 hooks:
   BeforeInstall:
-    - location: scripts/clear.sh
+    - location: clear.sh
       timeout: 60
       runas: ubuntu
   ApplicationStart:
-    - location: scripts/deploy.sh
+    - location: deploy.sh
       timeout: 60
       runas: ubuntu
