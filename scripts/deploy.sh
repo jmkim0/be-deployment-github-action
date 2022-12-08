@@ -19,4 +19,4 @@ else
 fi
 
 echo "> $JAR_NAME 배포"    >> /home/ubuntu/action/deploy.log
-sudo nohup java -jar $JAR_PATH >> /home/ubuntu/deploy.log 2>/home/ubuntu/action/deploy_err.log &
+sudo nohup java -jar $JAR_PATH >> /home/ubuntu/action/deploy.log 2>/home/ubuntu/action/deploy_err.log &
